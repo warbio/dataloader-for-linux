@@ -1,0 +1,21 @@
+#!/bin/sh
+
+################################################################
+# File    : dataloader-encrypt                                 #
+#                                                              #
+# Author  : Sascha Greuel <sascha.greuel@11880.com>            #
+# Website : https://github.com/SoftCreatR/dataloader-for-linux #
+################################################################
+
+set -o nounset
+set -o errexit
+
+EXE_PATH=/opt/dataloader/
+DATALOADER_VERSION=@@@DATALOADER_VERSION@@@
+JAVA_VERSION=$(java -version 2>&1 | grep -i version | cut -d'"' -f 2 | cut -d'.' -f 1)
+
+if [ -z "$JAVA_VERSION" ] || [ "$JAVA_VERSION" -lt 11 ]; then
+  echo "Java JRE 11 or later is not installed."
+else
+  java -cp "$EXE_PATH/dataloader-$DATALOADER_VERSION-uber.jar" com.salesforce.dataloader.security.EncryptionUtil "$@"
+fi

@@ -1,0 +1,45 @@
+#!/bin/sh
+
+################################################################
+# File    : dataloader-process                                 #
+#                                                              #
+# Author  : Sascha Greuel <sascha.greuel@11880.com>            #
+# Website : https://github.com/SoftCreatR/dataloader-for-linux #
+################################################################
+
+set -o nounset
+set -o errexit
+
+if [ -z "${1}" ]; then
+  cat <<-EOF
+Usage: $0 <configuration directory> [process name]
+
+  <configuration directory>    directory that contains configuration files,
+                               i.e. config.properties, process-conf.xml, database-conf.xml
+
+  <process name>               optional name of a batch process bean in process-conf.xml,
+                               for example:
+
+                                 $0 ../myconfigdir AccountInsert
+
+                               If process name is not specified, the parameter values from config.properties
+                               will be used to run the process instead of process-conf.xml,
+                               for example:
+
+                                 $0 ../myconfigdir
+
+EOF
+  exit
+fi
+
+EXE_PATH=/opt/dataloader/
+DATALOADER_VERSION=@@@DATALOADER_VERSION@@@
+CONFIG_DIR="${1}"
+PROCESS_OPTION="${2:+process.name=}${2:-}"
+JAVA_VERSION=$(java -version 2>&1 | grep -i version | cut -d'"' -f 2 | cut -d'.' -f 1)
+
+if [ -z "$JAVA_VERSION" ] || [ "$JAVA_VERSION" -lt 11 ]; then
+  echo "Java JRE 11 or later is not installed."
+else
+  java -cp "$EXE_PATH/dataloader-$DATALOADER_VERSION-uber.jar" com.salesforce.dataloader.process.DataLoaderRunner salesforce.config.dir="${CONFIG_DIR}" run.mode=batch "${PROCESS_OPTION}"
+fi

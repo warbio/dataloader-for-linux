@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=@@@DATALOADER_VERSION@@@-@@@COMMIT_HASH@@@
+Name=Data Loader
+Comment=An easy to use graphical tool that helps you to get your data into Salesforce objects
+Exec=dataloader
+Icon=dataloader
+Terminal=false
+Type=Application
+Categories=Development

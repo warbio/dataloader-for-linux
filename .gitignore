@@ -1,0 +1,5 @@
+/.idea/
+!/release/nightly/.gitkeep
+!/release/stable/.gitkeep
+/dataloader-src/
+/deb-tmp/

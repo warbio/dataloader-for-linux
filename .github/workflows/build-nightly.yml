@@ -1,0 +1,45 @@
+---
+name: 'Build Nightly'
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-and-build-nightly:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2.4.0
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      #- name: Cache local Maven repository
+      #  uses: actions/cache@v2
+      #  with:
+      #    path: ~/.m2/repository
+      #    key: ${{ runner.os }}-maven-${{ hashFiles('dataloader-src/pom.xml') }}
+      #    restore-keys: |
+      #      ${{ runner.os }}-maven-
+
+      - name: Build
+        run: |-
+          ./build.sh --nightly
+
+      - name: Commit and push on changes
+        run: |-
+          git add .
+          git diff
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git commit -m "Updated Nightly Build" -a || echo "No changes to commit"
+          git push

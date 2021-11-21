@@ -1,0 +1,8 @@
+Package: apex-dataloader
+Version: @@@DATALOADER_VERSION@@@-@@@COMMIT_HASH@@@
+Architecture: all
+Maintainer: Sascha Greuel <sascha.greuel@11880.com>
+Depends: openjdk-11-jdk
+Section: utils
+Priority: optional
+Description: An easy to use graphical tool that helps you to get your data into Salesforce objects
