@@ -25,11 +25,19 @@ Append `--stable` to build the stable release.
 
 1. Download the latest version
 
-<!-- download stable start --> <!-- download stable end -->
+<!-- download stable start -->
+```bash
+wget https://github.com/SoftCreatR/dataloader-for-linux/raw/main/release/stable/apex-dataloader-54.0.0-1641908116-8306b1d.deb
+```
+<!-- download stable end -->
 
 2. Install package
 
-<!-- install stable start --> <!-- install stable end -->
+<!-- install stable start -->
+```bash
+sudo dpkg -i apex-dataloader-54.0.0-1641908116-8306b1d.deb
+```
+<!-- install stable end -->
 
 ## Install (nightly)
 
