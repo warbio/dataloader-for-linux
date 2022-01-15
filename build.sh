@@ -158,7 +158,9 @@ cp -rp "$WORK_DIR/dataloader-src/target/swtlinux_x86_64" "$WORK_DIR/deb-tmp/opt/
 find "$WORK_DIR/deb-tmp" -type f -exec sed -i 's/@@@DATALOADER_VERSION@@@/'"$DATALOADER_VERSION"'/g' {} +
 find "$WORK_DIR/deb-tmp" -type f -exec sed -i 's/@@@COMMIT_HASH@@@/'"-$COMMIT_HASH"'/g' {} +
 
-dpkg-deb --build "$WORK_DIR/deb-tmp" "$DEB_FILE_PATH"
+chmod +x "$WORK_DIR/deb-tmp/opt/dataloader/*"
+
+dpkg-deb --build --root-owner-group "$WORK_DIR/deb-tmp" "$DEB_FILE_PATH"
 
 rm -rf "$WORK_DIR/deb-tmp"
 rm -rf "$WORK_DIR/dataloader-src"
