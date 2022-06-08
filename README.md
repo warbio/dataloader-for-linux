@@ -75,7 +75,7 @@ Successful installation provides you 3 binaries:
 
 > Exception in thread "main" java.lang.UnsatisfiedLinkError: Could not load SWT library.
 
-While SWT is shipped with dataloader, it is possible that your OS is looking for another version of it's libraries. In this case, you may just install it manually:
+While SWT is shipped with dataloader, it is possible that your OS is looking for another version of it's libraries. In this case, you may just install it system-wide:
 
 ```bash
 sudo apt install libswt-gtk-4-java
