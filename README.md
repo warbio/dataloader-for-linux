@@ -71,6 +71,16 @@ Successful installation provides you 3 binaries:
 - At least 256 MB of available memory (RAM)
 - Java Runtime Environment (JRE) version 11 or later such as openjdk-11-jre
 
+## Troubleshooting
+
+> Exception in thread "main" java.lang.UnsatisfiedLinkError: Could not load SWT library.
+
+While SWT is shipped with dataloader, it is possible that your OS is looking for another version of it's libraries. In this case, you may just install it manually:
+
+```bash
+sudo apt install libswt-gtk-4-java
+```
+
 ## 3rd party licenses included in Data Loader
 
 - [License](https://www.apache.org/licenses/LICENSE-2.0) for [Apache Jakarta Commons BeanUtils](http://jakarta.apache.org/commons/beanutils/)
