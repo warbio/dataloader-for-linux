@@ -27,7 +27,7 @@ Append `--stable` to build the stable release.
 
 <!-- download stable start -->
 ```bash
-wget https://github.com/SoftCreatR/dataloader-for-linux/raw/main/release/stable/apex-dataloader-56.0.0-1660772712-1ce112a.deb
+wget https://github.com/SoftCreatR/dataloader-for-linux/raw/main/release/stable/apex-dataloader-56.0.1-1661311958-ddc7a09.deb
 ```
 <!-- download stable end -->
 
@@ -35,7 +35,7 @@ wget https://github.com/SoftCreatR/dataloader-for-linux/raw/main/release/stable/
 
 <!-- install stable start -->
 ```bash
-sudo dpkg -i apex-dataloader-56.0.0-1660772712-1ce112a.deb
+sudo dpkg -i apex-dataloader-56.0.1-1661311958-ddc7a09.deb
 ```
 <!-- install stable end -->
 
