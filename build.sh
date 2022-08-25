@@ -87,6 +87,12 @@ if ! command_exists mvn; then
   exit 1
 fi
 
+# Make sure, that jq is installed
+if ! command_exists jq; then
+  echo "jq not found. Please install it first, and try again."
+  exit 1
+fi
+
 ########
 # Main #
 ########
