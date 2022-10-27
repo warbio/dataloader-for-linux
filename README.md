@@ -45,7 +45,7 @@ sudo dpkg -i apex-dataloader-56.0.4-1664574399-8064766.deb
 
 <!-- download nightly start -->
 ```bash
-wget https://github.com/SoftCreatR/dataloader-for-linux/raw/main/release/nightly/apex-dataloader-56.0.4-1665965662-f6a9ee7.deb
+wget https://github.com/SoftCreatR/dataloader-for-linux/raw/main/release/nightly/apex-dataloader-56.0.5-1666829450-0716398.deb
 ```
 <!-- download nightly end -->
 
@@ -53,7 +53,7 @@ wget https://github.com/SoftCreatR/dataloader-for-linux/raw/main/release/nightly
 
 <!-- install nightly start -->
 ```bash
-sudo dpkg -i apex-dataloader-56.0.4-1665965662-f6a9ee7.deb
+sudo dpkg -i apex-dataloader-56.0.5-1666829450-0716398.deb
 ```
 <!-- install nightly end -->
 
