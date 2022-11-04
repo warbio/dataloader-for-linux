@@ -1,6 +1,9 @@
 # Dataloader For Linux
 #### An easy to use graphical tool for Linux that helps you to get your data into Salesforce objects
 
+![image](https://user-images.githubusercontent.com/81188/199914116-3f717c18-e40d-4828-8042-16f51f20b7ed.png)
+
+
 ## Build Prerequisites
 
 - Debian/Ubuntu based OS
@@ -83,7 +86,7 @@ sudo apt install libswt-gtk-4-java
 
 ## 3rd party licenses included in Data Loader
 
-- [License](https://www.apache.org/licenses/LICENSE-2.0) for [Apache Jakarta Commons BeanUtils](http://jakarta.apache.org/commons/beanutils/)
-- [License](https://logging.apache.org/log4j/2.x/license.html) for [Apache Log4J 2.x](https://logging.apache.org/log4j/2.x/index.html)
-- [License](http://www.eclipse.org/legal/epl-2.0/) for [Eclipse SWT](http://www.eclipse.org/swt/)
-- [License](https://www.apache.org/licenses/LICENSE-2.0) for [Spring Framework](https://spring.io/projects/spring-framework)
+* [License](http://www.apache.org/licenses/LICENSE-2.0) for [Apache Commons DBCP 2.x](https://commons.apache.org/proper/commons-dbcp/), [Apache Commons IO 2.x](https://commons.apache.org/proper/commons-io/), [Apache HttpComponents 4.x](https://hc.apache.org/)
+* [License](https://logging.apache.org/log4j/2.x/license.html) for [Apache Log4J 2.x](https://logging.apache.org/log4j/2.x/index.html)
+* [License](http://www.eclipse.org/legal/epl-2.0/) for [Eclipse SWT 4.x](http://www.eclipse.org/swt/), [Eclipse JFace 3.x](https://wiki.eclipse.org/JFace)
+* [License](https://www.apache.org/licenses/LICENSE-2.0) for [Spring Framework Core Technologies - spring-context 5.x](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html)
